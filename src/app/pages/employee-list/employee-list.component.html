@@ -1,0 +1,51 @@
+<div class="page">
+
+    <h2 style="margin-top: 8%;">Employees </h2>
+    
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Position</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.position}}</td>
+                <td>{{employee.salary}}</td>
+                <td>
+                    <a [routerLink]="['/employee-details', employee.id]">
+                        <i class="bi bi-eye" style="color: rgb(102, 194, 102);"></i>
+                    </a>
+                    <i class="bi bi-pencil-square mx-4" (click)="edit(employee.id)" style="color: rgb(102, 159, 194);"></i>
+                    <i class="bi bi-trash3" (click)="delete(employee.id)" style="color: rgb(255, 63, 63);"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-floating" role="button" (click)="goTo()">
+        <i class="bi bi-person-plus-fill"></i>
+    </button>
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Employee</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <employee-form></employee-form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>

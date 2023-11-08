@@ -1,0 +1,24 @@
+
+<form [formGroup]="employeeForm" (ngSubmit)="createEmployee()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" formControlName ="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName ="email">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Position</label>
+        <input type="text" class="form-control" id="position" formControlName ="position">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Salary</label>
+        <input type="text" class="form-control" id="salary" formControlName ="salary">
+    </div>
+
+    <div class="modal-footer d-flex flex-row gap-3">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>
